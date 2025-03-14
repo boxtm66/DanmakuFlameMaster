@@ -10,6 +10,7 @@ import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import master.flame.danmaku.danmaku.util.SystemClock;
@@ -282,7 +283,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     mediaPlayer.start();
                 }
             });
-            mVideoView.setVideoPath(Environment.getExternalStorageDirectory() + "/1.flv");
+            // mVideoView.setVideoPath(Environment.getExternalStorageDirectory() + "/1.flv");
+            // mVideoView.setVideoURI(Uri.parse("https://vjs.zencdn.net/v/oceans.mp4"));
+            mVideoView.setVideoURI(Uri.parse("https://sf1-cdn-tos.huoshanstatic.com/obj/media-fe/xgplayer_doc_video/hls/xgplayer-demo.m3u8"));
         }
 
     }

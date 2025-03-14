@@ -1,18 +1,21 @@
 buildscript {
     repositories {
-        jcenter()
+        // jcenter()
         google()
+        gradlePluginPortal()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        // classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        // jcenter()
         google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
     }
 }
