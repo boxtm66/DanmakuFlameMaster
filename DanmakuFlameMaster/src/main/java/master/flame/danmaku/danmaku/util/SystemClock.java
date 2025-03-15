@@ -5,7 +5,8 @@ package master.flame.danmaku.danmaku.util;
  */
 public class SystemClock {
     public static final long uptimeMillis() {
-        return android.os.SystemClock.elapsedRealtime();
+        // return android.os.SystemClock.elapsedRealtime();
+        return CustomClock.getInstance().elapsedRealtime();
     }
 
     public static final void sleep(long mills) {

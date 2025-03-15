@@ -17,6 +17,7 @@ import master.flame.danmaku.danmaku.model.AlphaValue;
 import master.flame.danmaku.danmaku.model.BaseDanmaku;
 import master.flame.danmaku.danmaku.model.GlobalFlagValues;
 import master.flame.danmaku.danmaku.model.IDanmakus;
+import master.flame.danmaku.danmaku.util.CustomClock;
 
 public class DanmakuContext implements Cloneable {
 
@@ -128,6 +129,14 @@ public class DanmakuContext implements Cloneable {
      * Note: 在系统{@link android.os.Build.VERSION_CODES#JELLY_BEAN}以下, 0方式会被2方式代替
      */
     public byte updateMethod = 0;
+
+    // 设置弹幕倍数相关
+    public CustomClock mCustomClock = CustomClock.getInstance().init();
+
+    public DanmakuContext setSpeed(float speed) {
+        this.mCustomClock.setSpeed(speed);
+        return this;
+    }
 
     /**
      * set typeface
