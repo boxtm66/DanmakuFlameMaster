@@ -22,13 +22,17 @@ android {
     }
 }
 
-if (rootProject.file('gradle/gradle-mvn-push.gradle').exists()) {
-    apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
-}
-if (rootProject.file('gradle/gradle-bintray-upload.gradle').exists()) {
-    apply from: rootProject.file('gradle/gradle-bintray-upload.gradle')
-}
+// if (rootProject.file('gradle/gradle-mvn-push.gradle').exists()) {
+//     apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
+// }
+// if (rootProject.file('gradle/gradle-bintray-upload.gradle').exists()) {
+//     apply from: rootProject.file('gradle/gradle-bintray-upload.gradle')
+// }
+//
+// if (rootProject.file('gradle/publish.gradle').exists()) {
+//     apply from: rootProject.file('gradle/publish.gradle')
+// }
 
-if (rootProject.file('gradle/publish.gradle').exists()) {
-    apply from: rootProject.file('gradle/publish.gradle')
+if (rootProject.file('gradle/maven-publish.gradle').exists()) {
+    apply from: rootProject.file('gradle/maven-publish.gradle')
 }
