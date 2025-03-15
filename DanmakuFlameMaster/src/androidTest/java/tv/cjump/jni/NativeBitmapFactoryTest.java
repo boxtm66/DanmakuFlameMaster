@@ -1,8 +1,7 @@
 package tv.cjump.jni;
 
-import static androidx.test.platform.app.InstrumentationRegistry.getInstrumentation;
-
 import android.app.ActivityManager;
+import android.app.Instrumentation;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -10,13 +9,11 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Debug;
 import master.flame.danmaku.danmaku.util.SystemClock;
+import android.test.InstrumentationTestCase;
 import android.util.Log;
 
-import androidx.test.runner.AndroidJUnit4;
-
 import junit.framework.Assert;
-
-import org.junit.runner.RunWith;
+import junit.framework.TestCase;
 
 import java.util.ArrayList;
 import java.util.Locale;
@@ -24,8 +21,7 @@ import java.util.Locale;
 /**
  * Created by ch on 15-6-12.
  */
-@RunWith(AndroidJUnit4.class)
-public class NativeBitmapFactoryTest {
+public class NativeBitmapFactoryTest extends InstrumentationTestCase {
 
     private static final int DEFAULT_MESSAGE_SIZE = 1024;
     private static final int BYTES_IN_MEGABYTE = 1024 * 1024;
@@ -138,11 +134,11 @@ public class NativeBitmapFactoryTest {
     private void gcAndWait() {
         System.gc();
         SystemClock.sleep(10000);
-        //        try {
-        //            Debug.dumpHprofData("/sdcard/nbf_test_dump.hprof");
-        //        } catch (IOException e) {
-        //            e.printStackTrace();
-        //        }
+//        try {
+//            Debug.dumpHprofData("/sdcard/nbf_test_dump.hprof");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private static void appendSize(StringBuilder sb, String prefix, long bytes, String suffix) {
