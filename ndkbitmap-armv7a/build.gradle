@@ -28,3 +28,7 @@ if (rootProject.file('gradle/gradle-mvn-push.gradle').exists()) {
 if (rootProject.file('gradle/gradle-bintray-upload.gradle').exists()) {
     apply from: rootProject.file('gradle/gradle-bintray-upload.gradle')
 }
+
+if (rootProject.file('gradle/publish.gradle').exists()) {
+    apply from: rootProject.file('gradle/publish.gradle')
+}

@@ -17,11 +17,11 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="master.flame.danmaku"
-    android:versionCode="9025"
-    android:versionName="0.9.25" >
+    android:versionCode="9030"
+    android:versionName="0.9.30" >
 
     <uses-sdk
         android:minSdkVersion="9"
-        android:targetSdkVersion="22" />
+        android:targetSdkVersion="33" />
 
 </manifest>
